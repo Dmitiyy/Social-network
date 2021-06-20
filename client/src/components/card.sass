@@ -1,0 +1,50 @@
+@import '../assets/root.sass'
+
+.list__card
+    width: 600px
+    margin-top: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    @include background
+    padding-top: 30px
+    padding-bottom: 30px
+    &-center
+        width: 500px
+    &-photo
+        width: 100%
+        max-height: 300px
+        height: 300px
+        background: white
+        border-radius: 23px
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+    &-title
+        font-size: 25px
+        font-weight: reqular
+        color: white
+        margin-top: 15px
+    &-wrap
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    &-select
+        width: 30px
+        height: 30px
+        background: $selectColor
+        border-radius: 100px
+        cursor: pointer
+    &-selectn
+        width: 30px
+        height: 30px
+        background: transparent
+        border: 5px solid $selectColor
+        cursor: pointer
+        border-radius: 100px
+    &-description
+        color: white
+        font-size: 18px
+        width: 100%
+        margin-top: 15px
