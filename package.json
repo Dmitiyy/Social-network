@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "heroku-postbuild": "npm install --prifx client && npm run build --prefix client"
+    "start": "nodemon server.js",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
