@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const cloudinary = require('cloudinary').v2;
 const postRouter = require('./routes/postRoutes');
@@ -10,6 +11,12 @@ const port = process.env.PORT || 5000;
 const DB = process.env.CONNECTION.replace('<PASSWORD>', process.env.PASSWORD);
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '/client/build')))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 cloudinary.config({
     cloud_name: 'dzromyqmf',
