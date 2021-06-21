@@ -25,7 +25,7 @@ const Signup = () => {
             const response = await fetch(url, {
                 method: 'POST',
                 body: JSON.stringify(data),
-                headers: {'Content-Type': 'application/json'}
+                headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
             });
             
             return await response.json();

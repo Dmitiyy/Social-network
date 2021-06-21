@@ -24,7 +24,7 @@ const Main = () => {
 
             const getData = async (url) => {
                 const response = await fetch(url, {
-                    headers: {'Content-Type': 'application/json'}
+                    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
                 });
                 return await response.json();
             }
@@ -41,7 +41,8 @@ const Main = () => {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${token}`
+                            'Authorization': `Bearer ${token}`,
+                            'Accept': 'application/json'
                         }
                     });
                     return await response.json();
