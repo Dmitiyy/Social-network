@@ -16,6 +16,9 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use('/api/posts', postRouter);
+app.use('/api/users', userRouter);
+
 app.use(express.static(path.join(__dirname, '/client/build')))
 // app.use(express.static(__dirname))
 
@@ -29,8 +32,6 @@ cloudinary.config({
     api_secret: 'cqz4jdMA4Oh2tTDJwMTDGmCaaD8'
 });
 
-app.use('/api/posts', postRouter);
-app.use('/api/users', userRouter);
 
 mongoose.connect(DB, {
     useNewUrlParser: true,
